@@ -1,0 +1,31 @@
+{
+  "name": "vs-code_playwright-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "E2EWithAPI": "npx playwright test tests/ClientApp_E2E_withAPI_Updated.spec.js",
+    "regression": "npx playwright test tests",
+    "WebTests": "npx playwright test --grep @Web",
+    "APITests": "npx playwright test --grep @API",
+    "ChromeConfigtest": "npx playwright test --config playwright.config_Copy.js --project=Chrome test",
+    "CucumberRegressionparallel": "npx cucumber-js features/EcommerceApp_Basic.feature --parallel 3 --exit --format html:cucumber-reporter.html",
+    "CucumberRegressiontags": "npx cucumber-js --tags '@Regression' --exit --format html:cucumber-reporter.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@azure/identity": "^4.13.1",
+    "@azure/playwright": "^1.1.4",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "allure-playwright": "^3.7.1",
+    "exceljs": "^4.4.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.8.1"
+  }
+}
