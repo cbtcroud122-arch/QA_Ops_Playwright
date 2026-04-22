@@ -16,7 +16,7 @@ import { chromium, defineConfig, devices } from '@playwright/test';
 //we can assign all the config to const variable and export that to all modules so we can use it across project 
 export const config = ({
   testDir: './tests',
-  testMatch: '**/*.spec.js',
+  testMatch: '**/*.spec.{js,ts}',
   retries: 1,
   timeout: 30*1000, // *1000 in millisec - 40sec 
   expect:{ // For Assertion timeouts use expect
